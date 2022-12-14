@@ -8,7 +8,7 @@ from uploader.models import Image
 
 
 class Categoria(models.Model):
-    nome = models.CharField(max_length=100)
+    descricao = models.CharField(max_length=100)
     
     def __str__(self):
         return self.nome
@@ -23,9 +23,9 @@ class Editora(models.Model):
 
 class Autor(models.Model):
     nome = models.CharField(max_length=255)
-    dtnasc = models.DateField()
+    dtnasc = models.DateField(null=True, blank=True)
     dtfal = models.DateField(null=True, blank=True)
-
+    email = models.EmailField(null=True, blank=True)
 
     def __str__(self):
         return self.nome
