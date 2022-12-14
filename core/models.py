@@ -11,7 +11,7 @@ class Categoria(models.Model):
     descricao = models.CharField(max_length=100)
     
     def __str__(self):
-        return self.nome
+        return self.descricao
     
 
 class Editora(models.Model):
@@ -53,9 +53,6 @@ class Livro(models.Model):
         blank=True,
         default=None,
     )
-
-    
-    
     def __str__(self):
         return f'{self.titulo} ({self.quantidade})'
 
