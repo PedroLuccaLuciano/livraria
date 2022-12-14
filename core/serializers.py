@@ -1,8 +1,9 @@
-from rest_framework.serializers import ModelSerializer
-from core.models import Categoria, Editora, Livro, Autor
 from rest_framework.serializers import ModelSerializer, SlugRelatedField
+
+from core.models import Autor, Categoria, Editora, Livro
 from uploader.models import Image
 from uploader.serializers import ImageSerializer
+
 
 class CategoriaSerializer(ModelSerializer):
     class Meta:
